@@ -16,6 +16,8 @@ var grafikmor_sir = []string{
 func main() {
 	fmt.Println("vim-go")
 	r := gin.Default()
+	r.StaticFile("/favicon.ico", "./resources/favicon.ico")
+
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "pong",
